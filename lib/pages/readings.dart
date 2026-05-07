@@ -104,55 +104,66 @@ class _SaintsState extends State<Readings> {
                     ),
                     SizedBox(height: 20),
                     Container(
+                      
+                      padding: EdgeInsets.all(16),
                       margin: EdgeInsets.all(10),
-                      height: 200,
+                    height: 200,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: Container(
-                        padding: EdgeInsets.all(16),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          gradient: LinearGradient(
-                            colors: [
-                              AppColors.gradientStart,
-                              AppColors.primary,
-                            ],
-                          ),
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Row(
-                              children: [
-                                Container(
-                                  height: 60,
-                                  width: 80,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(10),
-                                    color: AppColors.background,
-                                  ),
-                                  child: Image.asset('assets/img/book.png'),
-                                ),
-
-                                //SizedBox(width: 10),
-                              ],
-                            ),
-                            SizedBox(height: 10),
-                            Text(
-                              "Daily Readings",
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.w900,
-                              ),
-                            ),
-                            Text(
-                              "Nourish your soul with\nGod's word daily",
-                              textAlign: TextAlign.center,
-                              maxLines: 2,
-                            ),
+                        gradient: LinearGradient(
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                          colors: [
+                            AppColors.primary,
+                            AppColors.gradientEnd,
                           ],
                         ),
+                        image: DecorationImage(image: AssetImage(
+                          'assets/img/church.jpg'
+                        ),
+                        fit: BoxFit.cover,
+                        //alignment: Alignment.bottomRight, 
+                        opacity: 0.10,
+                        //alignment: AlignmentGeometry.bottomRight,
+                        //opacity: 0.5
+                        // colorFilter: ColorFilter.mode(Colors.white.withOpacity(0.5), BlendMode.darken
+                        // )
+                        ),
+                        
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              Container(
+                                height: 60,
+                                width: 80,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10),
+                                  color: AppColors.background,
+                                ),
+                                child: Image.asset('assets/img/book.png'),
+                              ),
+                    
+                              //SizedBox(width: 10),
+                            ],
+                          ),
+                          SizedBox(height: 10),
+                          Text(
+                            "Daily Readings",
+                            style: TextStyle(
+                              fontSize: 25,
+                              fontWeight: FontWeight.w900,
+                            ),
+                          ),
+                          Text(
+                            "Nourish your soul with\nGod's word daily",
+                            textAlign: TextAlign.start,
+                            maxLines: 2,
+                            style: TextStyle(fontSize: 18),
+                          ),
+                        ],
                       ),
                     ),
                     SizedBox(height: 20),

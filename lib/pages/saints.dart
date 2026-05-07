@@ -104,57 +104,61 @@ class _SaintsState extends State<Saints> {
                     ),
                     SizedBox(height: 20),
                     Container(
-                      margin: EdgeInsets.all(10),
+                       margin: EdgeInsets.all(10),
                       height: 200,
+                      padding: EdgeInsets.all(16),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: Container(
-                        padding: EdgeInsets.all(16),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          gradient: LinearGradient(
-                            colors: [
-                              AppColors.gradientStart,
-                              AppColors.primary,
-                            ],
-                          ),
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Row(
-                              children: [
-                                Container(
-                                  height: 60,
-                                  width: 80,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(10),
-                                    color: AppColors.background,
-                                  ),
-                                  child: Image.asset(
-                                    'assets/img/st.therese.png',
-                                  ),
-                                ),
-
-                                //SizedBox(width: 10),
-                              ],
-                            ),
-                            SizedBox(height: 10),
-                            Text(
-                              "Lives of Saints",
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.w900,
-                              ),
-                            ),
-                            Text(
-                              "Discover the inspiring lives\nof holy men and women",
-                              textAlign: TextAlign.center,
-                              maxLines: 2,
-                            ),
+                        gradient: LinearGradient(
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                          colors: [
+                            AppColors.gradientStart,
+                            AppColors.primary,
                           ],
                         ),
+                       image: DecorationImage(image: AssetImage(
+                          'assets/img/saintbg.jpg'
+                        ),
+                        fit: BoxFit.cover,
+                        opacity: 0.10,
+                        )
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              Container(
+                                height: 60,
+                                width: 80,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10),
+                                  color: AppColors.background,
+                                ),
+                                child: Image.asset(
+                                  'assets/img/st.therese.png',
+                                ),
+                              ),
+                    
+                              //SizedBox(width: 10),
+                            ],
+                          ),
+                          SizedBox(height: 10),
+                          Text(
+                            "Lives of Saints",
+                            style: TextStyle(
+                              fontSize: 25,
+                              fontWeight: FontWeight.w900,
+                            ),
+                          ),
+                          Text(
+                            "Discover the inspiring lives\nof holy men and women",
+                            textAlign: TextAlign.start,
+                            maxLines: 2,
+                            style: TextStyle(fontSize: 18),
+                          ),
+                        ],
                       ),
                     ),
                     SizedBox(height: 20),
